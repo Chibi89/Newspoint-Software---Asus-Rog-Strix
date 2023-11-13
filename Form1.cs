@@ -37,6 +37,9 @@ namespace Newspoint_Software___Asus_Rog_Strix_g15_g513rm
         {
             loadChar.Visible = false;
             D_PANEL.Visible = true;
+            D_PANEL.Dock = DockStyle.Fill;
         }
+
+        
     }
 }
