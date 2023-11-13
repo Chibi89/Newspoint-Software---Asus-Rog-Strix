@@ -16,11 +16,11 @@ namespace Newspoint_Software___Asus_Rog_Strix_g15_g513rm
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             #region"loadmicaEffecy"
@@ -32,7 +32,6 @@ namespace Newspoint_Software___Asus_Rog_Strix_g15_g513rm
             LoadSetTime.Start();
             #endregion
         }
-
         private void LoadSetTime_Tick(object sender, EventArgs e)
         {
             loadChar.Visible = false;

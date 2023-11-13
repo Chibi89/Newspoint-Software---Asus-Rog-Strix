@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\preview\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="17.0">
+ <Targets>
+  <Target Name="F:\Devlopement\software generale\NewSoft.Framework\bin\Release\NewSoft.Framework.dll">
+   <Modules>
+    <Module Name="newsoft.framework.dll">
+     <Namespaces>
+      <Namespace Name="NewSoft.Framework">
+       <Types>
+        <Type Name="MicaLibrary+MicaEffectMethods" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DwmExtendFrameIntoClientArea(System.IntPtr,NewSoft.Framework.MicaLibrary+ParameterTypes+MARGINS&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2023-10-24 16:41:12Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Poiché si tratta di un metodo P/Invoke, 'MicaLibrary.MicaEffectMethods.DwmExtendFrameIntoClientArea(IntPtr, ByRef MicaLibrary.ParameterTypes.MARGINS)' deve essere definito in una classe chiamata NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2023-10-24 16:41:12Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Modificare l'accessibilità di P/Invoke 'MicaLibrary.MicaEffectMethods.DwmExtendFrameIntoClientArea(IntPtr, ByRef MicaLibrary.ParameterTypes.MARGINS)' in modo che non sia più visibile dall'esterno degli assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DwmSetWindowAttribute(System.IntPtr,NewSoft.Framework.MicaLibrary+ParameterTypes+DWMWINDOWATTRIBUTE,System.Int32&amp;,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2023-10-24 16:41:12Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Poiché si tratta di un metodo P/Invoke, 'MicaLibrary.MicaEffectMethods.DwmSetWindowAttribute(IntPtr, MicaLibrary.ParameterTypes.DWMWINDOWATTRIBUTE, ByRef Integer, Integer)' deve essere definito in una classe chiamata NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2023-10-24 16:41:12Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Modificare l'accessibilità di P/Invoke 'MicaLibrary.MicaEffectMethods.DwmSetWindowAttribute(IntPtr, MicaLibrary.ParameterTypes.DWMWINDOWATTRIBUTE, ByRef Integer, Integer)' in modo che non sia più visibile dall'esterno degli assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Spostare i P/Invoke nella classe NativeMethods</Name>
+   <Description>Questo tipo contiene membri con l'attributo DllImport. I membri con l'attributo DllImport devono essere contenuti in classi chiamate NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Poiché si tratta di un metodo P/Invoke, {0} deve essere definito in una classe chiamata NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401">
+   <Name>I P/Invoke non devono essere visibili</Name>
+   <Description>Il livello di interoperabilità non deve essere pubblico. L'attributo DllImport non deve essere applicato a membri accessibili pubblicamente (pubblici o protetti).</Description>
+   <Resolution Name="Default">Modificare l'accessibilità di P/Invoke {0} in modo che non sia più visibile dall'esterno degli assembly.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182209.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalError</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="17.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoria</String>
+  <String Key="Certainty">Attendibilità</String>
+  <String Key="CollapseAll">Comprimi tutto</String>
+  <String Key="CheckId">ID controllo</String>
+  <String Key="Error">Errore</String>
+  <String Key="Errors">errori</String>
+  <String Key="ExpandAll">Espandi tutto</String>
+  <String Key="Help">Guida</String>
+  <String Key="Line">Riga</String>
+  <String Key="Messages">messaggi</String>
+  <String Key="LocationNotStoredInPdb">[Percorso non archiviato nel PDB]</String>
+  <String Key="Project">Progetto</String>
+  <String Key="Resolution">Risoluzione</String>
+  <String Key="Rule">Regola</String>
+  <String Key="RuleFile">File delle regole</String>
+  <String Key="RuleDescription">Descrizione regola</String>
+  <String Key="Source">Origine</String>
+  <String Key="Status">Stato</String>
+  <String Key="Target">Destinazione</String>
+  <String Key="Warning">Avviso</String>
+  <String Key="Warnings">avvisi</String>
+  <String Key="ReportTitle">Report di Code Analysis</String>
+ </Localized>
+</FxCopReport>

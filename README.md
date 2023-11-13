@@ -1,1 +1,1 @@
-# Newspoint Software - Asus Rog Strix g15 g513rm
+# Newspoint Software - Asus Rog Strix G15 G513RM

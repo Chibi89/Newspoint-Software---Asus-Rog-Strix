@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="NewSoft.Framework">
       <HintPath>..\NewSoft.Framework\bin\Release\NewSoft.Framework.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,7 +72,6 @@
     </Compile>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
-    <None Include="bin\Debug\Newspoint Software - Asus Rog Strix g15 g513rm.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,22 +81,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="README.md" />
     <None Include="Setting.bash" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\NewSoft.Framework.dll" />
-    <Content Include="bin\Debug\NewSoft.Framework.pdb" />
-    <Content Include="bin\Debug\NewSoft.Framework.xml" />
-    <Content Include="bin\Debug\Newspoint Software - Asus Rog Strix g15 g513rm.exe" />
-    <Content Include="bin\Debug\Newspoint Software - Asus Rog Strix g15 g513rm.pdb" />
-    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
-    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Release\" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
