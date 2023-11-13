@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="NewSoft.Framework">
       <HintPath>..\NewSoft.Framework\bin\Release\NewSoft.Framework.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
